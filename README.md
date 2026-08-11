@@ -535,33 +535,7 @@ La tabla `materia` contiene:
 
 ### 15 · Script SQL
 
-El script base de la presentación comienza creando la base de datos:
-
-``` sql
-CREATE DATABASE instituto;
-USE instituto;
-```
-
-Luego crea las tablas:
-
-``` sql
-CREATE TABLE estudiante (
-    legajo INT AUTO_INCREMENT PRIMARY KEY,
-    dni INT NOT NULL,
-    nombre VARCHAR(50) NOT NULL,
-    apellido VARCHAR(50) NOT NULL,
-    fechaNacimiento DATE NOT NULL
-) AUTO_INCREMENT=1000;
-```
-
-``` sql
-CREATE TABLE materia (
-    codigo INT AUTO_INCREMENT PRIMARY KEY,
-    nombreMateria VARCHAR(100) NOT NULL
-);
-```
-
-También se incluyen registros iniciales para `estudiante` y `materia`.
+Se incluye en este repositorio un archivo .sql con el script para crear la base de datos, tablas y agregar algunos datos de prueba.
 
 
 ------------------------------------------------------------------------
