@@ -1,4 +1,4 @@
-# POO -- Clase 09: MVC, JDBC y Bases de Datos SQL
+# POO - Clase 09: MVC, JDBC y Bases de Datos SQL
 
 Este repositorio acompaña la presentación de la **Clase 09** sobre el
 patrón arquitectónico **MVC**, el acceso a **bases de datos relacionales
@@ -15,44 +15,23 @@ lógica y datos.
 
 ## Temas
 
-  -------------------------------------------------------------------------------
-  \#   Tema                Paquete / recurso
-  ---- ------------------- ------------------------------------------------------
-  1    Patrón MVC          `controllers`, `models`, `views`
+|  | Tema | Paquete / recurso |
+|---|------|---------|
+| 1 | Patrón MVC | `controllers`, `models`, `views` |
+| 2 | Modelo, Vista y Controlador | `models`, `views`, `controllers` |
+| 3 | MVC y separación de responsabilidades | Arquitectura MVC |
+  4 | Interfaces para desacoplar las vistas | `views.Vista` |
+| 5 | Dato e información | Conceptos|
+| 6 | Bases de datos relacionales | MySQL |
+| 7 | MySQL y MySQL Workbench | SGBD / herramienta gráfica |
+| 8 | SQL y operaciones CRUD | SQL |
+| 9 | JDBC | `java.sql` |
+| 10 | Patrón DAO | `GenericDAO`, `EstudianteDAO`, `MateriaDAO` |
+| 11 | Conexión a la base de datos | `connection.ConexionDB`|
+| 12 | Organización del  | `models`, `views`, `controllers`, `exceptions`, `utils` |
+| 13 | UML de la arquitectura | Diagramas de clases |
 
-  2    Modelo, Vista y     `models`, `views`, `controllers`
-       Controlador         
-
-  3    MVC y separación de Arquitectura MVC
-       responsabilidades   
-
-  4    Interfaces para     `views.Vista`
-       desacoplar las      
-       vistas              
-
-  5    Dato e información  Conceptos
-
-  6    Bases de datos      MySQL
-       relacionales        
-
-  7    MySQL y MySQL       SGBD / herramienta gráfica
-       Workbench           
-
-  8    SQL y operaciones   SQL
-       CRUD                
-
-  9    JDBC                `java.sql`
-
-  10   Patrón DAO          `GenericDAO`, `EstudianteDAO`, `MateriaDAO`
-
-  11   Conexión a la base  `connection.ConexionDB`
-       de datos            
-
-  12   Organización del    `models`, `views`, `controllers`, `exceptions`,
-       proyecto            `utils`
-
-  13   UML de la           Diagramas de clases
-       arquitectura        
+              
   -------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
@@ -334,12 +313,12 @@ diferencia principalmente:
 
 #### Operaciones CRUD
 
-  CRUD    Operación   SQL
-  ------- ----------- ----------
-  **C**   Create      `INSERT`
-  **R**   Read        `SELECT`
-  **U**   Update      `UPDATE`
-  **D**   Delete      `DELETE`
+  | CRUD | Operación | SQL |
+  |------|-----------|-----|
+  | **C** | Create | `INSERT` |
+  | **R** | Read | `SELECT` |
+  | **U** | Update | `UPDATE` |
+  | **D** | Delete | `DELETE` |
 
 Ejemplos:
 
@@ -535,20 +514,20 @@ materia
 
 La tabla `estudiante` contiene:
 
-  Campo               Tipo            Restricción
-  ------------------- --------------- ---------------------------------
-  `legajo`            `INT`           `PRIMARY KEY`, `AUTO_INCREMENT`
-  `dni`               `INT`           `NOT NULL`
-  `nombre`            `VARCHAR(50)`   `NOT NULL`
-  `apellido`          `VARCHAR(50)`   `NOT NULL`
-  `fechaNacimiento`   `DATE`          `NOT NULL`
+| Campo            | Tipo         | Restricción                    |
+|------------------|--------------|--------------------------------|
+| `legajo`         | `INT`        | `PRIMARY KEY`, `AUTO_INCREMENT` |
+| `dni`            | `INT`        | `NOT NULL`                     |
+| `nombre`         | `VARCHAR(50)`| `NOT NULL`                     |
+| `apellido`       | `VARCHAR(50)`| `NOT NULL`                     |
+| `fechaNacimiento`| `DATE`       | `NOT NULL`                     |
 
 La tabla `materia` contiene:
 
-  Campo             Tipo             Restricción
-  ----------------- ---------------- ---------------------------------
-  `codigo`          `INT`            `PRIMARY KEY`, `AUTO_INCREMENT`
-  `nombreMateria`   `VARCHAR(100)`   `NOT NULL`
+| Campo           | Tipo          | Restricción                    |
+|-----------------|---------------|--------------------------------|
+| `codigo`        | `INT`         | `PRIMARY KEY`, `AUTO_INCREMENT` |
+| `nombreMateria` | `VARCHAR(100)`| `NOT NULL`                     |
 
 
 
@@ -734,13 +713,9 @@ donde cada responsabilidad se encuentra en un lugar definido y donde los
 detalles técnicos de persistencia quedan aislados de la interacción con
 el usuario.
 
-------------------------------------------------------------------------
+---
 
-  -----------------------------------------------------------------------
-  Realizado por **Miguel Silva C.**
-  -----------------------------------------------------------------------
-  GitHub: [github.com/darkwhiskers](https://github.com/darkwhiskers)
+| Realizado por **Miguel Silva C.** \
+| GitHub: [github.com/darkwhiskers] *( https://github.com/darkwhiskers )* \
+| Licencia: © darkwhiskers.org — *Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)*
 
-  Licencia: © darkwhiskers.org ---
-  *Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)*
-  -----------------------------------------------------------------------
