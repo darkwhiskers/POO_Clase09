@@ -18,18 +18,20 @@ lógica y datos.
 |  | Tema | Paquete / recurso |
 |---|------|---------|
 | 1 | Patrón MVC | `controllers`, `models`, `views` |
-| 2 | Modelo, Vista y Controlador | `models`, `views`, `controllers` |
-| 3 | MVC y separación de responsabilidades | Arquitectura MVC |
-  4 | Interfaces para desacoplar las vistas | `views.Vista` |
-| 5 | Dato e información | Conceptos|
-| 6 | Bases de datos relacionales | MySQL |
-| 7 | MySQL y MySQL Workbench | SGBD / herramienta gráfica |
-| 8 | SQL y operaciones CRUD | SQL |
-| 9 | JDBC | `java.sql` |
-| 10 | Patrón DAO | `GenericDAO`, `EstudianteDAO`, `MateriaDAO` |
+| 2 | Modelo (Model) | `models.Modelo` |
+| 3 | Vista (View) | `views.Vista` |
+  4 | Controlador (Controller) | `controllers.Controlador` |
+| 5 | MVC y múltiples vistas | Conceptos |
+| 6 | Dato e información | Conceptos |
+| 7 | Bases de datos relacionales | SGBD / herramienta gráfica |
+| 8 | MySQL y MySQL Workbench | SQL |
+| 9 | SQL | `java.sql` |
+| 10 | JDBC | `java.sql.*` |
 | 11 | Conexión a la base de datos | `connection.ConexionDB`|
-| 12 | Organización del  | `models`, `views`, `controllers`, `exceptions`, `utils` |
-| 13 | UML de la arquitectura | Diagramas de clases |
+| 12 | DAO (Data Access Object)  | `models`, `daos` |
+| 13 | Modelo + DAO + JDBC | Diagramas de clases |
+| 14 | Base de datos instituto | Ejemplo práctico |
+| 15 | Script SQL | Descarga el archivo .sql |
 
               
   -------------------------------------------------------------------------------
