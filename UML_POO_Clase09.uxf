@@ -1,0 +1,191 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>855</x><y>792</y><w>189</w><h>180</h></coordinates><panel_attributes>Package::conection
+
+ConexionDB
+
+--
+
+_ - URL: String_
+_ - USER: String_
+_ - PASSWORD: String_
+
+--
+
+_ + getConnection(): Connection_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>45</y><w>189</w><h>252</h></coordinates><panel_attributes>Package::models
+
+Materia
+
+--
+
+ - codigo: int
+ - nombreMateria: String
+
+--
+
+ + Materia ( ): void
+ + Materia ( String ): void
+ + Materia ( int, String ): void
+ + getCodigo ( ): int
+ + getNombreMateria ( ): String
+ + setCodigo ( int ): void
+ + setNombreMateria(String): void
+/ + toString ( ): String/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1116</x><y>0</y><w>450</w><h>378</h></coordinates><panel_attributes>Package::models
+
+Persona
+
+--
+
+ - legajo: int
+ - dni: int
+ - nombre: String
+ - apellido: String
+ - fecNac: Date
+
+--
+
+ + Persona ():  void
+ + Persona (dni: int, nombre: String, apellido: String, fecNac: Date): void
+ + Persona (legajo: int, dni: int, nombre: String, apellido: String, fecNac: Date): void
+ + getLegajo ( ): int
+ + getDni ( ): int
+ + getNombre ( ): String
+ + getApellido ( ): String
+ + getFecNac ( ): Date
+ + setLegajo ( legajo: int ): void
+ + setDni ( dni: int ): void
+ + setNombre ( nombre: String ): void
+ + setApellido ( apellido: String ): void
+ + setFecNac ( fecNac: Date ): void
+/ + toString ( ): String/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>981</x><y>549</y><w>216</w><h>135</h></coordinates><panel_attributes>Package::daos
+
+EstudianteDAO &lt;Estudiante, Integer&gt;
+
+--
+
+--
+
+ + findByDni ( int ): Estudiante</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>747</x><y>549</y><w>189</w><h>135</h></coordinates><panel_attributes>Package::daos
+
+MateriaDAO &lt;Materia, Integer&gt;
+
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>675</x><y>1377</y><w>189</w><h>198</h></coordinates><panel_attributes>Package::views
+
+VistaEstudiante
+
+--
+
+ - scanner: Scanner
+
+--
+
+ + pedirDni ( ): int
+ + pedirLegajo ( ): int
+ + pedirNombre ( ): String
+ + pedirApellido ( ): String
+ + pedirFecha ( ): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>891</x><y>1377</y><w>189</w><h>171</h></coordinates><panel_attributes>Package::views
+
+VistaMateria
+
+--
+
+ - scanner: Scanner
+
+--
+
+ + pedirCodigo ( ): int
+ + pedirNombre ( ): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>954</y><w>189</w><h>198</h></coordinates><panel_attributes>Package::controllers
+
+ControladorEstudiante
+
+--
+
+--
+
+ + agregarEstudiante ( ): void
+ + listarEstudiantes ( ): void
+ + buscarEstudianteLegajo ( ): void
+ + buscarEstudianteDni ( ): void
+ + actualizarEstudiante ( ): void
+ + eliminarEstudiante ( ): void
+ + pedirFecha ( ): LocalDate</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>1179</y><w>189</w><h>171</h></coordinates><panel_attributes>Package::controllers
+
+ControladorMateria
+
+--
+
+--
+
+ - agregarMateria ( ): void
+ - listarMaterias ( ): void
+ - buscarMateria ( ): void
+ - actualizarMateria ( ): void
+ - eliminarMateria ( ): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1476</y><w>189</w><h>99</h></coordinates><panel_attributes>
+Main
+
+--
+
+_ + main(args: String[]):void _
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1242</x><y>549</y><w>189</w><h>144</h></coordinates><panel_attributes>Package::models
+
+Estudiante
+
+--
+
+ + Estudiante ():  void
+ + Estudiante (dni: int, nombre: String, apellido: String, fecNac: Date): void
+ + Estudiante (legajo: int, dni: int, nombre: String, apellido: String, fecNac: Date): void
+/ + toString ( ): String/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1323</x><y>369</y><w>27</w><h>198</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>UMLClass</id><coordinates><x>882</x><y>351</y><w>189</w><h>171</h></coordinates><panel_attributes>/&lt;&lt;Interface&gt;&gt;/
+Package::daos
+
+GenericDAO &lt;T, ID&gt;
+
+--
+
+ + create( T ): void
+ + findAll ( ): List&lt;T&gt;
+ + findById ( ID ): T
+ + update ( T ): void
+ + delete ( ID ): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>828</x><y>414</y><w>72</w><h>153</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;10;10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>1062</x><y>414</y><w>63</w><h>153</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;50;10;50;150</additional_attributes></element><element><id>Relation</id><coordinates><x>1188</x><y>621</y><w>72</w><h>27</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>288</y><w>27</w><h>279</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;290</additional_attributes></element><element><id>UMLClass</id><coordinates><x>891</x><y>1125</y><w>189</w><h>135</h></coordinates><panel_attributes>/&lt;&lt;Interface&gt;&gt;/
+Package::views
+
+Vista
+
+--
+
+ + menu ( ): int
+ + mostrarError ( ): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1107</x><y>1377</y><w>189</w><h>135</h></coordinates><panel_attributes>Package::views
+
+VistaPrincipal
+
+--
+
+ - scanner: Scanner
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>972</x><y>1251</y><w>243</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;80;250;80;250;140</additional_attributes></element><element><id>Relation</id><coordinates><x>972</x><y>1251</y><w>27</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>1251</y><w>243</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.
+</panel_attributes><additional_attributes>250;10;250;80;10;80;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>675</y><w>72</w><h>234</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>60;240;10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1035</x><y>675</y><w>72</w><h>234</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;240;60;240;60;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1143</y><w>189</w><h>99</h></coordinates><panel_attributes>/&lt;&lt;Interface&gt;&gt;/
+Package::controllers
+
+Controller
+--
+
+ + iniciar ( ): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>1377</y><w>189</w><h>126</h></coordinates><panel_attributes>Package::controllers
+
+ControladorPrincipal
+
+--
+
+
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>666</y><w>603</w><h>369</h></coordinates><panel_attributes>lt=&lt;-
+- dao</panel_attributes><additional_attributes>650;10;650;390;10;390</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>1026</y><w>243</w><h>369</h></coordinates><panel_attributes>lt=&lt;-
+- vista</panel_attributes><additional_attributes>220;390;220;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>603</y><w>225</w><h>657</h></coordinates><panel_attributes>lt=&lt;-
+- dao</panel_attributes><additional_attributes>230;10;110;10;110;710;10;710</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>1242</y><w>441</w><h>378</h></coordinates><panel_attributes>lt=&lt;-
+- vista</panel_attributes><additional_attributes>470;340;470;400;70;400;70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>972</y><w>198</w><h>243</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;250;50;250;50;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>1188</y><w>198</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>1188</y><w>198</w><h>225</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;50;10;50;230;200;230</additional_attributes></element><element><id>Relation</id><coordinates><x>297</x><y>1467</y><w>936</w><h>189</h></coordinates><panel_attributes>lt=&lt;-
+ - vista</panel_attributes><additional_attributes>1020;50;1020;190;10;190;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>297</x><y>1224</y><w>81</w><h>261</h></coordinates><panel_attributes>lt=&lt;-
+- cMat</panel_attributes><additional_attributes>70;10;10;10;10;270;70;270</additional_attributes></element><element><id>Relation</id><coordinates><x>243</x><y>1008</y><w>135</w><h>459</h></coordinates><panel_attributes>lt=&lt;-
+- cEst</panel_attributes><additional_attributes>130;10;10;10;10;490;130;490</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>1494</y><w>288</w><h>72</h></coordinates><panel_attributes>lt=&lt;.
+cPrinc</panel_attributes><additional_attributes>300;10;300;60;10;60</additional_attributes></element></diagram>
